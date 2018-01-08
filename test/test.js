@@ -17,19 +17,19 @@ console.log(
   'Generating PoW for random hash',
   randomBlockHash.toString('hex'));
 
-console.time('Work Generation');
+console.time('Generation Time');
 const workValue = pow(randomBlockHash.toString('hex'));
-console.timeEnd('Work Generation');
+console.timeEnd('Generation Time');
 
 const context = blake2.createHash('blake2b', {digestLength: 8});
 context.update(hex_uint8(workValue).reverse());
 context.update(Uint8Array.from(randomBlockHash));
 const score = context.digest();
 
-console.log('Work Generated', score);
+console.log('Work Value:', workValue);
 
 if(score[7] === 0xff
     && score[6] === 0xff
     && score[5] === 0xff
-    && score[4] > 0xc0) console.log('Work validation Successful!');
-else console.log('Work Validation Failure.');
+    && score[4] > 0xc0) console.log('Validation Successful!');
+else console.log('Validation Failure.');

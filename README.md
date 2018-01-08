@@ -4,10 +4,16 @@ Native compiled C Module for Node.js to calculate Proof of Work (PoW) value for 
 
 Based on [jaimehgb/RaiBlocksWebAssembly](https://github.com/jaimehgb/RaiBlocksWebAssemblyPoW), migrated to use node-gyp.
 
+### Installation
+
+```
+npm install --save raiblocks-pow
+```
+
 ### Usage
 
 ```js
-var pow = require('node-raiblocks-pow');
+var pow = require('raiblocks-pow');
 
 var work = pow('<previous block hash>');
 ```
