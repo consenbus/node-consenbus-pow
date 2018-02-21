@@ -32,7 +32,7 @@ module.exports.threaded = function(hex, cb) {
           threads[j].kill();
         }
         cb(null, zeroPad(work, 16));
-      } else {
+      } else if(!thread.killed) {
         // Work not found in the given number of iterations, try again
         thread.send(hex);
       }
