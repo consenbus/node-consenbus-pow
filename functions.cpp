@@ -5,7 +5,7 @@
 #include "xorshift.hpp"
 
 uint64_t iterations(uint8_t * bytes, int max_iterations) {
-  uint64_t threshold = 0xffffffc000000000;
+  uint64_t threshold = 0xffffc00000000000;
   uint64_t work;
   uint64_t output = 0;
   blake2b_state hash;

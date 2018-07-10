@@ -1,7 +1,7 @@
 {
-  "name": "raiblocks-pow",
-  "version": "0.0.3",
-  "description": "RaiBlocks PoW native code module",
+  "name": "consenbus-pow",
+  "version": "0.0.1",
+  "description": "Consenbus PoW native code module",
   "main": "index.js",
   "scripts": {
     "test": "node test/test.js",
@@ -9,9 +9,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/numtel/node-raiblocks-pow.git"
+    "url": "git+https://github.com/consenbus/node-consenbus-pow.git"
   },
-  "author": "numtel <ben@latenightsketches.com",
+  "author": "Redstone Zhao <13740080@qq.com>",
   "gypfile": true,
   "dependencies": {
     "bindings": "^1.3.0",
